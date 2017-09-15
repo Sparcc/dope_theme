@@ -44,8 +44,30 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 
 @import url("css/bootstrap.min.css");
+.content-area {
+	background-color: grey;
+}
 
+.site-main {
+	/*
+	padding-left: 100px;
+	*/
+	background-color: grey;
+}
 
+.site-content, header {
+	background-color: yellow;
+}
+
+html {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+.site { 
+*/
 
 /*--------------------------------------------------------------
 # Normalize
