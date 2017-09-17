@@ -42,28 +42,47 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
-
 @import url("css/bootstrap.min.css");
+
 .content-area {
-	background-color: grey;
+	
+	padding:15px;
 }
 
-.site-main {
+.site-header {
+	background-color: #86af49;
+}
+
+.site-content {
+	background-color: #d5e1df;
+}
+
+.widget-area {
 	/*
-	padding-left: 100px;
-	*/
-	background-color: grey;
+	background-color: #b5e7a0;
+	max-width:25%;
+	padding-top: 50px;
+	padding-bottom: 50px;*/
 }
 
-.site-content, header {
-	background-color: yellow;
+@media only screen and (max-width: 768px) {
+	html {
+		display: block;
+	}
 }
 
+@media only screen and (max-width: 1000px) {
+	html {
+		display: block;
+	}
+}
 html {
-	width: 1000px;
+	max-width: 1200px;
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 
 /*
 .site { 
@@ -385,10 +404,6 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul, ol {
-	margin: 0 0 1.5em 3em;
-}
-
 ul {
 	list-style: disc;
 }
@@ -545,6 +560,7 @@ a:hover, a:active {
 	clear: both;
 	display: block;
 	float: left;
+	background-color: #3e4444;
 	width: 100%;
 }
 
@@ -586,6 +602,7 @@ a:hover, a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	padding:10px;
 }
 
 .main-navigation a {

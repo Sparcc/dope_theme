@@ -13,8 +13,9 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="container">
+<div class="row">
+	<div id="primary" class="content-area col-lg-10">
 		<main id="main" class="site-main front-page">
 			THIS IS THE FRONT PAGE TEMPLATE
 			<?php
@@ -32,7 +33,11 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	
 
 <?php
-get_sidebar();
+get_sidebar();?>
+</div><!-- .row -->
+</div><!-- .container -->
+<?php	
 get_footer();
