@@ -16,7 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<script src="js/bootstrap.min.js"></script>
+	<script src="wp-content/themes/dope_theme/js/jquery-3.2.1.js"></script>
+	<script src="wp-content/themes/dope_theme/js/umd/popper.js"></script>
+	<script src="wp-content/themes/dope_theme/js/bootstrap.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -41,8 +43,19 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dope_theme' ); ?></button>
+		<nav id="site-navigation" class="main-navigation">		
+			<div class="menu-toggle menu-icon" onclick="iconChange(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary mobile', 'menu_class' => 'nav-menu' ) ); ?>;
+			<script>
+				function iconChange(x) {
+					x.classList.toggle("change");
+					$("#menu-mobile-navigation").toggleClass(".mobile-active");
+				}
+			</script>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
