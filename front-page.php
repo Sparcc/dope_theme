@@ -13,9 +13,11 @@
  */
 
 get_header(); ?>
-<div class="container">
+<div class="container-fluid">
 <div class="row">
-	<div id="primary" class="content-area col-lg-10">
+<?php
+get_sidebar();?>
+	<div id="primary" class="content-area col-lg-9 col-sm-12 col-xs-12">
 		<main id="main" class="site-main front-page">
 			THIS IS THE FRONT PAGE TEMPLATE
 			<?php
@@ -35,8 +37,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 	
 
-<?php
-get_sidebar();?>
+
 </div><!-- .row -->
 </div><!-- .container -->
 <?php	

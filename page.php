@@ -13,10 +13,13 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+<div class="container-fluid">
+<div class="row">
+<?php
+get_sidebar();?>
+	<div id="primary" class="content-area col-lg-9 col-sm-12 col-xs-12">
+		<main id="main" class="site-main front-page">
+			THIS IS A DEFAULT PAGE TEMPLATE
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -32,7 +35,11 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	
 
-<?php
-get_sidebar();
+
+</div><!-- .row -->
+</div><!-- .container -->
+<?php	
 get_footer();
+
