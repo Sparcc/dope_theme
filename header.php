@@ -51,9 +51,13 @@
 			</div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary mobile', 'menu_class' => 'nav-menu' ) ); ?>;
 			<script>
+				$(document).ready(function(){
+					//$(".menu-icon").hide();
+				});
 				function iconChange(x) {
 					x.classList.toggle("change");
-					$("#menu-mobile-navigation").toggleClass(".mobile-active");
+					$("#menu-mobile-navigation").toggleClass("change");
+					$("#menu-mobile-navigation").toggle();
 				}
 			</script>
 			<?php
