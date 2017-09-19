@@ -45,21 +45,34 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import url("css/bootstrap.min.css");
 
 @media only screen and (max-width: 768px) {
-	html {
+	#page {
 		display: block;
 	}
 }
 
-@media only screen and (max-width: 1200px) {
-	html {
+@media only screen and (max-width: 970px) {
+	#page {
 		display: block;
 	}
 }
-html {
-	max-width: 1200px;
+#page{
+	max-width: 1300px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+body {
+	background-image: url("/wp-test/wp-content/themes/dope_theme/img/upfeathers.png");
+}
+
+#masthead > div.site-branding > a {
+	max-width: 10em;
+	max-height: 10em;
+}
+
+#masthead > div.site-branding > p.site-title > a {
+		font-family:
 }
 
 .content-area {	
@@ -74,11 +87,22 @@ html {
 	background-color: #d5e1df;
 }
 
+#primary {
+	/*
+	padding-right:35px;
+	padding-left:35px;*/
+	padding:20px;
+}
 
 /*BOOTSTRAP STUFF*/
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+#content > div > div {
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 /*--------------------------------------------------------------
@@ -555,8 +579,20 @@ a:hover, a:active {
 	background-color: #3e4444;
 	width: 100%;
 	transition: 0.8s;
-	/*padding-bottom: -5px;*/
-	/*box-shadow: 11px -30px 50px rgba(0,0,0,0.50);*/
+	/*
+	height:50px;
+	position: relative;
+	top:-50px;*/
+}
+
+#nav-spacer {
+	display:none;
+	/*
+	display: block;
+	float: left;
+	background-color: #d5e1df;
+	width: 100%;
+	height: 50px;*/
 }
 
 .main-navigation ul {
@@ -579,6 +615,7 @@ a:hover, a:active {
 	width: 8em;
 	padding-top:10px;
 	padding-bottom:10px;
+	text-align: center;
 	/*padding-top:8px;
 	padding-right: 10px;*/
 }
@@ -593,6 +630,27 @@ a:hover, a:active {
 	position: absolute;
 	padding:0px;
 	margin:0px;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+.main-navigation a:link {
+	color: white;
+}
+
+.main-navigation a:visited {
+	color: black;
+}
+
+.main-navigation a:hover {
+	
+}
+
+.main-navigation a:activate {
+	
 }
 
 /*
@@ -685,7 +743,7 @@ a:hover, a:active {
     height: 5px;
     background-color: #333;
     margin: 6px;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 
 /* Rotate first bar */
@@ -725,6 +783,17 @@ a:hover, a:active {
 	}
 	.menu-icon{
 		display: inline;
+	}
+	
+	.main-navigation li {
+		float: left;
+		position: relative;
+		padding-left: 10px; 
+		transition: 0.2s;
+		width: 8em;
+		padding-top:10px;
+		padding-bottom:10px;
+		text-align: left;
 	}
 }
 
@@ -882,6 +951,10 @@ a:hover, a:active {
 	width:100%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.left-col {
+	padding:0px;
 }
 
 /*--------------------------------------------------------------

@@ -166,3 +166,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+//wp_enqueue_script( 'script', get_template_directory_uri() . 'wp-content/themes/dope_theme/js/jquery-3.2.1.js', array ( 'jquery' ), 1.1, true)

@@ -16,9 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<script src="wp-content/themes/dope_theme/js/jquery-3.2.1.js"></script>
-	<script src="wp-content/themes/dope_theme/js/umd/popper.js"></script>
-	<script src="wp-content/themes/dope_theme/js/bootstrap.js"></script>
+	<?php include 'memes.php';?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -42,7 +40,7 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
+		<div id="nav-spacer">NAV SPACER</div>
 		<nav id="site-navigation" class="main-navigation">		
 			<div class="menu-toggle menu-icon" onclick="iconChange(this)">
 				<div class="bar1"></div>
@@ -51,14 +49,7 @@
 			</div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary mobile', 'menu_class' => 'nav-menu' ) ); ?>;
 			<script>
-				$(document).ready(function(){
-					//$(".menu-icon").hide();
-				});
-				function iconChange(x) {
-					x.classList.toggle("change");
-					$("#menu-mobile-navigation").toggleClass("change");
-					$("#menu-mobile-navigation").toggle();
-				}
+				
 			</script>
 			<?php
 				wp_nav_menu( array(
